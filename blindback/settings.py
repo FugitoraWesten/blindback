@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'image_processing',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,10 @@ TEMPLATES = [
         },
     },
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        # You can add other renderers if needed
+    ],
+    # Other settings...
+}
